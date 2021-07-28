@@ -1,0 +1,32 @@
+{
+    "name": "ex-banking-pkg",
+    "version": "1.0.0",
+    "description": "ex-banking-pkg package developed for Coingaming",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "jest",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+        "lint": "tslint -p tsconfig.json",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "keywords": [],
+    "author": "sergey.bukalo@gmail.com",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^26.0.24",
+        "jest": "^27.0.6",
+        "prettier": "^2.3.2",
+        "ts-jest": "^27.0.4",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.3.5"
+    },
+    "dependencies": {}
+}
